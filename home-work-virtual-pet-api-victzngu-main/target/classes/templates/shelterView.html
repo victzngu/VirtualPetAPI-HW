@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+<!--    <link href="/css/style.css" rel="stylesheet">-->
+<!--    <link href="/css/layout.css" rel="stylesheet">-->
+    <title>WeCanCodeIT Pet Shelter</title>
+</head>
+​
+<body>
+<header class="header">
+    <h1 class="header__title">Welcome to the Pet Shelter</h1>
+    <h2 th:text="${shelter.shelterName}">Location</h2>
+
+</header>
+<section class="book-list">
+    <h2 class="book-list__heading">Here is a list of our pets:</h2>
+    <nav class="book-list-nav">
+        <ul class="book-list-links">
+            <li class="book-list-links__book" th:each="pet:${shelter.getPets()}">
+                <a class="book-list-links__link" th:href="@{'/pets/'+ ${pet.id}}"
+                th:text="${pet.petName}">Refactoring</a>
+            </li>
+​
+        </ul>
+    </nav>
+</section>
+</body>
+​
+</html>
