@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Volunteers</h1> 
+<h2 th:text="${volunteer.fullName}">Location</h2>
+<ul>
+    <li th:text="${volunteer.phoneNumber}">Phone Number</li>
+    <!-- <li th:text="${volunteer.emailAddress}">address</li> -->
+    <li th:text="${volunteer.streetAddress}">address</li>
+    <li th:text="${volunteer.city}">city</li>
+    <li th:text="${volunteer.state}">state</li>
+</ul>
+</body>
+</html>
+
+
+
+<!-- fullName=" + fullName + ", phoneNumber=" + phoneNumber + ", emailAddress=" + emailAddress
+                + ", streetAddress=" + streetAddress + ", city=" + city + ", state=" + state + " -->
